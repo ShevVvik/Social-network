@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import SNET.annotation.Benchmark;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -14,6 +15,7 @@ import SNET.domain.entity.message.ChatMessage;
 
 @Transactional
 @Repository
+@Benchmark
 public interface ChatMessageRepository extends JpaRepository<ChatMessage, Long> {
 
 	@Query(" FROM ChatMessage m"

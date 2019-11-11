@@ -3,10 +3,11 @@ package SNET.dao;
 import java.util.List;
 import java.util.Set;
 
+import SNET.annotation.Benchmark;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import SNET.domain.entity.News;
-
+@Benchmark
 public interface NewsRepository extends JpaRepository<News, Long> {
 	List<News> findByAuthorIdOrderByIdDesc(Long id);
 	List<News> findByAuthorIdAndForFriendsFalseOrderByIdDesc(Long id);

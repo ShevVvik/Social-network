@@ -2,10 +2,11 @@ package SNET.dao;
 
 import java.util.List;
 
+import SNET.annotation.Benchmark;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import SNET.domain.entity.FriendList;
-
+@Benchmark
 public interface FriendListRepository extends JpaRepository<FriendList, Long> {
 	
 	List<FriendList> findByUser1IdOrUser2Id(Long user1Id, Long user2Id);

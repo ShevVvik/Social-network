@@ -4,8 +4,11 @@ package SNET.config;
 Данный класс реализует интерфейс PasswordEncoder, который отвечает за кодирование паролей
 */
 
+import SNET.annotation.Benchmark;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+
+@Benchmark
 public class PlainPasswordEncoder implements PasswordEncoder {
 
 	@Override

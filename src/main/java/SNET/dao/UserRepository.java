@@ -3,11 +3,12 @@ package SNET.dao;
 import java.util.List;
 import java.util.Optional;
 
+import SNET.annotation.Benchmark;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import SNET.domain.entity.User;
 
-
+@Benchmark
 public interface UserRepository extends JpaRepository<User, Long> {
 
 	

@@ -2,6 +2,7 @@ package SNET.dao;
 
 import java.util.List;
 
+import SNET.annotation.Benchmark;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -9,6 +10,7 @@ import org.springframework.data.repository.query.Param;
 import SNET.domain.entity.User;
 import SNET.domain.entity.message.ChatChannel;
 
+@Benchmark
 public interface ChatChannelRepository extends JpaRepository<ChatChannel, Long> {
 	
 	@Query(" SELECT uuid"
