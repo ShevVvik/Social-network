@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 
+import SNET.annotation.SelfInjection;
 import org.apache.tomcat.util.http.fileupload.FileUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +43,10 @@ public class NewsDomainServices {
 	//@Value("${project.manager.news.dir.path}")
 	@Value("C:\\Folder\\News")
     private String newsDirPath;
-	
+
+	@SelfInjection
+	private NewsDomainServices test;
+
 	@Autowired
 	public NewsRepository newsDao;
 	
@@ -108,7 +112,8 @@ public class NewsDomainServices {
 				news = newsDao.findAllByTextContainingAndAuthorIdAndForFriendsFalseOrderByIdDesc(pattern, id);
 			}
 		}
-		return transformToDTO(news, id);
+		System.out.println("Test");
+		return test.transformToDTO(news, id);
 	}
 
 	private List<NewsDTO> transformToDTO(List<News> news, Long id) {

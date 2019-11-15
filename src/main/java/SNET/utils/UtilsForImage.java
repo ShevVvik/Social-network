@@ -2,6 +2,7 @@ package SNET.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 
 import org.apache.tomcat.util.http.fileupload.FileUtils;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,7 +31,9 @@ public class UtilsForImage {
 	            
 	            try {
 	                FileUtils.cleanDirectory(new File(filePath));
-	        
+	        		InputStream in = multipartFile.getInputStream();
+	        		File f = new File(String.valueOf(in));
+	        		multipartFile.getResource();
 	                String orgName = multipartFile.getOriginalFilename();
 	                String fullFilePath = filePath + orgName;
 	        

@@ -2,38 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6349cb7-904a-4466-a928-60f37dc5dcd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/SNET/annotation/Benchmark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SNET/config/BenchmarkBeenPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_1_6_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_4_2_2_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_4_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjdk_jmh_jmh_core_1_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjdk_jmh_jmh_generator_annprocess_1_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SNET/annotation/SelfInjection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/SNET/config/SelfIjectContextListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SNET.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SNET.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/config/PlainPasswordEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/config/PlainPasswordEncoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/dao/ChatChannelRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/dao/ChatChannelRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/dao/ChatMessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/dao/ChatMessageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/dao/CommentsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/dao/CommentsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/dao/FriendListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/dao/FriendListRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/dao/HobbyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/dao/HobbyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/dao/NewsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/dao/NewsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/dao/TagsNewsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/dao/TagsNewsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/dao/TagsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/dao/TagsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/dao/UserHobbiesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/dao/UserHobbiesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/dao/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/dao/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/domain/services/UserDomainServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/domain/services/UserDomainServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SNET/config/PlainPasswordEncoder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/config/PlainPasswordEncoder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SNET/dao/ChatChannelRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/dao/ChatChannelRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SNET/dao/ChatMessageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/dao/ChatMessageRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SNET/dao/CommentsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/dao/CommentsRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SNET/dao/FriendListRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/dao/FriendListRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SNET/dao/HobbyRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/dao/HobbyRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SNET/dao/NewsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/dao/NewsRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SNET/dao/TagsNewsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/dao/TagsNewsRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SNET/dao/TagsRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/dao/TagsRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SNET/dao/UserHobbiesRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/dao/UserHobbiesRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SNET/dao/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/dao/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SNET/domain/services/UserDomainServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/domain/services/UserDomainServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/domain/services/NewsDomainServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/domain/services/NewsDomainServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/utils/UtilsForImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/utils/UtilsForImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SNET/domain/services/NewsDomainServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/domain/services/NewsDomainServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SNET/utils/UtilsForImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/utils/UtilsForImage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/message.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/message.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/profile.css" afterDir="false" />
     </list>
@@ -46,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -115,6 +96,9 @@
       <workItem from="1572951362042" duration="45000" />
       <workItem from="1573492073738" duration="63000" />
       <workItem from="1573493192511" duration="6827000" />
+      <workItem from="1573806093619" duration="646000" />
+      <workItem from="1573824527606" duration="1236000" />
+      <workItem from="1573835279464" duration="7558000" />
     </task>
     <servers />
   </component>
@@ -133,5 +117,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="classBean" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
