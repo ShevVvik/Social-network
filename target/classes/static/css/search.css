@@ -3,7 +3,7 @@ body{
     font-family: Calibri;
     background-image: 
         linear-gradient(to top, rgba(74, 74, 74, 0.2), rgba(74,74,74,0.2)),
-        url("../img/app.jpg");
+        url("../img/nature.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

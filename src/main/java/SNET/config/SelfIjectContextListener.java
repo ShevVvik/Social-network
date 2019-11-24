@@ -21,7 +21,7 @@ public class SelfIjectContextListener implements ApplicationListener<ContextRefr
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        ApplicationContext context = event.getApplicationContext();
+        /*ApplicationContext context = event.getApplicationContext();
         String[] names = context.getBeanDefinitionNames();
         for(String beanName : names) {
             BeanDefinition beanDefinition = factory.getBeanDefinition(beanName);
@@ -42,6 +42,6 @@ public class SelfIjectContextListener implements ApplicationListener<ContextRefr
                 System.out.println(beanName);
             }
         }
-        System.out.println("All");
+        System.out.println("All");*/
     }
 }

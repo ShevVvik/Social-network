@@ -44,9 +44,6 @@ public class NewsDomainServices {
 	@Value("C:\\Folder\\News")
     private String newsDirPath;
 
-	@SelfInjection
-	private NewsDomainServices test;
-
 	@Autowired
 	public NewsRepository newsDao;
 	
@@ -113,7 +110,7 @@ public class NewsDomainServices {
 			}
 		}
 		System.out.println("Test");
-		return test.transformToDTO(news, id);
+		return transformToDTO(news, id);
 	}
 
 	private List<NewsDTO> transformToDTO(List<News> news, Long id) {

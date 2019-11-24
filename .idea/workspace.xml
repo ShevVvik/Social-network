@@ -2,21 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6349cb7-904a-4466-a928-60f37dc5dcd3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jopt_simple_jopt_simple_4_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjdk_jmh_jmh_core_1_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_openjdk_jmh_jmh_generator_annprocess_1_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SNET/annotation/SelfInjection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/SNET/config/SelfIjectContextListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_4_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_1_5_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_amqp_2_1_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/nature.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SNET.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SNET.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/config/SelfIjectContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/config/SelfIjectContextListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/SNET/domain/services/NewsDomainServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/domain/services/NewsDomainServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/SNET/utils/UtilsForImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SNET/utils/UtilsForImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/edit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/friend.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/friend.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/message.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/message.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/registration.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/registration.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/search.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SNET/config/SelfIjectContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/config/SelfIjectContextListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/SNET/domain/services/NewsDomainServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/domain/services/NewsDomainServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SNET/utils/UtilsForImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SNET/utils/UtilsForImage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/edit.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/edit.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/friend.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/friend.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/message.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/message.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/static/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/registration.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/registration.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/search.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -99,6 +111,8 @@
       <workItem from="1573806093619" duration="646000" />
       <workItem from="1573824527606" duration="1236000" />
       <workItem from="1573835279464" duration="7558000" />
+      <workItem from="1574593840676" duration="972000" />
+      <workItem from="1574608177503" duration="1746000" />
     </task>
     <servers />
   </component>
