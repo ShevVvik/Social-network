@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.DestinationVariable;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,49 +28,56 @@ import SNET.utils.ConverterUserDTO;
 import SNET.utils.JSONResponseHelper;
 
 @Controller
-public class MessageStompController {
-	
-	@Autowired
-	private ChatDomainServices chatService;
+public class MessageStompController implements MessageController {
 
-	@Autowired
-	private UserDomainServices userService;
-	
-	@MessageMapping("/message.{channelId}")
-    @SendTo("/topic/message.{channelId}")
+    @Autowired
+    private ChatDomainServices chatService;
+
+    @Autowired
+    private UserDomainServices userService;
+
+    @Autowired
+    private SimpMessagingTemplate template;
+
+    @MessageMapping("/message.{channelId}")
     public ChatMessageDTO chatMessage(@DestinationVariable String channelId, ChatMessageDTO message) {
-      chatService.submitMessage(message);
-      return message;
-	}
-	
-	@RequestMapping(value="/message", method=RequestMethod.PUT, produces="application/json", consumes="application/json")
-    public ResponseEntity<String> establishChatChannel(@RequestBody ChatConnectionInitializeDTO chatChannelInitialization, Authentication auth) { 
-	  UserDetailsImpl userDetails = (UserDetailsImpl) auth.getPrincipal();
-      String channelUuid = chatService.establishChatSession(chatChannelInitialization);
-      User userOne = userDetails.getUser();
-      User userTwo = userService.getById(chatChannelInitialization.getUserIdTwo());
-
-      EstablishedChatChannelDTO establishedChatChannel = new EstablishedChatChannelDTO(
-        channelUuid,
-        ConverterUserDTO.convertUserToUserDTO(userOne),
-        ConverterUserDTO.convertUserToUserDTO(userTwo)
-      );
-    
-      return JSONResponseHelper.createResponse(establishedChatChannel, HttpStatus.OK);
+        chatService.submitMessage(message, channelId);
+        return message;
     }
-	
-	@RequestMapping(value="/message", method=RequestMethod.GET, produces="application/json")
+
+    public ChatMessageDTO sendToClient(ChatMessageDTO messageDTO) {
+        template.convertAndSend("/message." + messageDTO.getChannelID(), messageDTO);
+        return messageDTO;
+    }
+
+    @RequestMapping(value = "/message", method = RequestMethod.PUT, produces = "application/json", consumes = "application/json")
+    public ResponseEntity<String> establishChatChannel(@RequestBody ChatConnectionInitializeDTO chatChannelInitialization, Authentication auth) {
+        UserDetailsImpl userDetails = (UserDetailsImpl) auth.getPrincipal();
+        String channelUuid = chatService.establishChatSession(chatChannelInitialization);
+        User userOne = userDetails.getUser();
+        User userTwo = userService.getById(chatChannelInitialization.getUserIdTwo());
+
+        EstablishedChatChannelDTO establishedChatChannel = new EstablishedChatChannelDTO(
+                channelUuid,
+                ConverterUserDTO.convertUserToUserDTO(userOne),
+                ConverterUserDTO.convertUserToUserDTO(userTwo)
+        );
+
+        return JSONResponseHelper.createResponse(establishedChatChannel, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/message", method = RequestMethod.GET, produces = "application/json")
     public String getChatMessagesPage(Model model, Authentication auth) {
-		UserDetailsImpl userDetails = (UserDetailsImpl) auth.getPrincipal();
-		model.addAttribute("user", userDetails.getUser());
-		model.addAttribute("dialogs", chatService.getAllDialogByUser(userDetails.getUser()));
-		return "/user/mes";
+        UserDetailsImpl userDetails = (UserDetailsImpl) auth.getPrincipal();
+        model.addAttribute("user", userDetails.getUser());
+        model.addAttribute("dialogs", chatService.getAllDialogByUser(userDetails.getUser()));
+        return "/user/mes";
     }
-    
-    @RequestMapping(value="/message/{channelUuid}", method=RequestMethod.GET, produces="application/json")
-    public ResponseEntity<String> getExistingChatMessages(@PathVariable("channelUuid") String channelUuid) {
-    	List<ChatMessageDTO> messages = chatService.getExistingChatMessages(channelUuid);
 
-    	return JSONResponseHelper.createResponse(messages, HttpStatus.OK);
+    @RequestMapping(value = "/message/{channelUuid}", method = RequestMethod.GET, produces = "application/json")
+    public ResponseEntity<String> getExistingChatMessages(@PathVariable("channelUuid") String channelUuid) {
+        List<ChatMessageDTO> messages = chatService.getExistingChatMessages(channelUuid);
+
+        return JSONResponseHelper.createResponse(messages, HttpStatus.OK);
     }
 }

@@ -1,13 +1,25 @@
 package SNET.domain.dto.message;
 
-public class ChatMessageDTO {
+import java.io.Serializable;
+
+public class ChatMessageDTO implements Serializable {
 
 	private long fromUserId;
 	  
 	private long toUserId;
 
 	private String contents;
-	
+
+	private String channelID;
+
+	public String getChannelID() {
+		return channelID;
+	}
+
+	public void setChannelID(String channelID) {
+		this.channelID = channelID;
+	}
+
 	public ChatMessageDTO() {}
 	
 	public ChatMessageDTO(String contents2, Long id, Long id2) {

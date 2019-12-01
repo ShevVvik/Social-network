@@ -20,7 +20,7 @@ public class SelfIjectContextListener implements ApplicationListener<ContextRefr
     private ConfigurableListableBeanFactory factory;
 
     @Override
-    public void onApplicationEvent(ContextRefreshedEvent event) {
+    public void onApplicationEvent(ContextRefreshedEvent event) {/*
         ApplicationContext context = event.getApplicationContext();
         String[] names = context.getBeanDefinitionNames();
         for(String beanName : names) {
@@ -42,6 +42,6 @@ public class SelfIjectContextListener implements ApplicationListener<ContextRefr
                 System.out.println(beanName);
             }
         }
-        System.out.println("All");
+        System.out.println("All");*/
     }
 }
