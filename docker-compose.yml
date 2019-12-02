@@ -1,0 +1,17 @@
+version: '3'
+services:
+  mdb:
+    image: mariadb
+    container_name: mariadb
+    ports: - 3306:3306
+    volumes: - F:\DataBase\data\snet2 : /var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 12345
+      MYSQL_DATABASE: snet2
+  app:
+    image:
+    container-name: 
+    ports: 8080:8080
+    restart: always
+    links: -mdb
